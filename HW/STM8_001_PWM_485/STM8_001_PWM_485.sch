@@ -1,0 +1,478 @@
+EESchema Schematic File Version 4
+LIBS:STM8_001_PWM_485-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Interface_UART:SP3485EN U3
+U 1 1 5FB3C76C
+P 5100 5350
+F 0 "U3" H 4850 5700 50  0000 C CNN
+F 1 "SP3485EN" H 5350 5700 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/Package_SO.pretty:SOIC-8_3.9x4.9mm_P1.27mm" H 6150 5000 50  0001 C CIN
+F 3 "http://www.icbase.com/pdf/SPX/SPX00480106.pdf" H 5100 5350 50  0001 C CNN
+	1    5100 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L BK_Common:STM8S001J3M U2
+U 1 1 5FB3C773
+P 5050 3500
+F 0 "U2" H 4800 3850 50  0000 C CNN
+F 1 "STM8S001J3M" H 5350 3850 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/Package_SO.pretty:SOIC-8_3.9x4.9mm_P1.27mm" H 5100 4050 50  0001 L CNN
+F 3 "https://www.st.com/resource/en/datasheet/stm8s001j3.pdf" H 4950 3600 50  0001 C CNN
+	1    5050 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 5FB3C77A
+P 4550 3900
+F 0 "C3" H 4642 3946 50  0000 L CNN
+F 1 "1u" H 4642 3855 50  0000 L CNN
+F 2 "KiCad/kicad-footprints/Capacitor_SMD.pretty:C_0805_2012Metric" H 4550 3900 50  0001 C CNN
+F 3 "~" H 4550 3900 50  0001 C CNN
+	1    4550 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 3700 4550 3700
+Wire Wire Line
+	4550 3700 4550 3800
+Wire Wire Line
+	4550 4000 4550 4050
+Wire Wire Line
+	5050 3900 5050 4050
+Wire Wire Line
+	5050 2950 5050 3100
+Wire Wire Line
+	5100 4850 5100 4950
+$Comp
+L power:GND #PWR0101
+U 1 1 5FB3C78D
+P 5100 5850
+F 0 "#PWR0101" H 5100 5600 50  0001 C CNN
+F 1 "GND" H 5105 5677 50  0000 C CNN
+F 2 "" H 5100 5850 50  0001 C CNN
+F 3 "" H 5100 5850 50  0001 C CNN
+	1    5100 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 5750 5100 5850
+$Comp
+L power:GND #PWR0102
+U 1 1 5FB3C794
+P 4800 4200
+F 0 "#PWR0102" H 4800 3950 50  0001 C CNN
+F 1 "GND" H 4805 4027 50  0000 C CNN
+F 2 "" H 4800 4200 50  0001 C CNN
+F 3 "" H 4800 4200 50  0001 C CNN
+	1    4800 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 4050 4800 4050
+Wire Wire Line
+	4800 4200 4800 4050
+Connection ~ 4800 4050
+Wire Wire Line
+	4800 4050 5050 4050
+Wire Wire Line
+	4700 5250 4600 5250
+Wire Wire Line
+	4600 5450 4700 5450
+Wire Wire Line
+	5450 3400 5750 3400
+Wire Wire Line
+	5450 3500 5750 3500
+Text Label 5550 3500 0    50   ~ 0
+SWIM_PWM2
+Wire Wire Line
+	4600 5250 4600 5350
+Connection ~ 4600 5350
+Wire Wire Line
+	4600 5350 4600 5450
+Text Label 6100 5250 0    50   ~ 0
+A
+Text Label 6100 5450 0    50   ~ 0
+B
+Wire Wire Line
+	1300 3650 1400 3650
+Wire Wire Line
+	1400 3650 1400 3550
+$Comp
+L power:GND #PWR0103
+U 1 1 5FB3C7F1
+P 1400 4300
+F 0 "#PWR0103" H 1400 4050 50  0001 C CNN
+F 1 "GND" H 1405 4127 50  0000 C CNN
+F 2 "" H 1400 4300 50  0001 C CNN
+F 3 "" H 1400 4300 50  0001 C CNN
+	1    1400 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 4200 1400 4200
+Wire Wire Line
+	1400 4200 1400 4300
+Wire Wire Line
+	1300 3750 1700 3750
+Wire Wire Line
+	1300 4100 1700 4100
+Text Label 1650 4100 0    50   ~ 0
+A
+Text Label 1650 3750 0    50   ~ 0
+B
+Wire Wire Line
+	5450 3600 5750 3600
+Wire Wire Line
+	4650 3500 4250 3500
+Text Label 4250 3500 0    50   ~ 0
+PWM3
+Wire Wire Line
+	4650 3400 4250 3400
+Text Label 4250 3400 0    50   ~ 0
+BTN
+Text Label 5550 3600 0    50   ~ 0
+PWM1
+$Comp
+L Device:C_Small C2
+U 1 1 5FB3C81D
+P 5500 1750
+F 0 "C2" H 5592 1796 50  0000 L CNN
+F 1 "10u" H 5592 1705 50  0000 L CNN
+F 2 "KiCad/kicad-footprints/Capacitor_SMD.pretty:C_1206_3216Metric" H 5500 1750 50  0001 C CNN
+F 3 "~" H 5500 1750 50  0001 C CNN
+	1    5500 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5FB3C824
+P 4400 1750
+F 0 "C1" H 4492 1796 50  0000 L CNN
+F 1 "10u" H 4492 1705 50  0000 L CNN
+F 2 "KiCad/kicad-footprints/Capacitor_SMD.pretty:C_1206_3216Metric" H 4400 1750 50  0001 C CNN
+F 3 "~" H 4400 1750 50  0001 C CNN
+	1    4400 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 1600 4400 1600
+Wire Wire Line
+	4400 1650 4400 1600
+Connection ~ 4400 1600
+Wire Wire Line
+	5500 1650 5500 1600
+Connection ~ 5500 1600
+Wire Wire Line
+	5500 1600 5900 1600
+Wire Wire Line
+	4400 1850 4400 2050
+Wire Wire Line
+	4400 2050 5000 2050
+Wire Wire Line
+	5000 2050 5000 1900
+Wire Wire Line
+	5000 2050 5500 2050
+Wire Wire Line
+	5500 2050 5500 1850
+Connection ~ 5000 2050
+$Comp
+L power:GND #PWR0104
+U 1 1 5FB3C839
+P 5000 2050
+F 0 "#PWR0104" H 5000 1800 50  0001 C CNN
+F 1 "GND" H 5005 1877 50  0000 C CNN
+F 2 "" H 5000 2050 50  0001 C CNN
+F 3 "" H 5000 2050 50  0001 C CNN
+	1    5000 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5FB3C84B
+P 8250 2250
+F 0 "SW1" V 8204 2398 50  0000 L CNN
+F 1 "Sw" V 8295 2398 50  0000 L CNN
+F 2 "KiCad/kicad-footprints/Button_Switch_SMD.pretty:SW_SPST_CK_RS282G05A3" H 8250 2450 50  0001 C CNN
+F 3 "" H 8250 2450 50  0001 C CNN
+	1    8250 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 5FB3C852
+P 8250 1750
+F 0 "R1" H 8309 1796 50  0000 L CNN
+F 1 "10K" H 8309 1705 50  0000 L CNN
+F 2 "KiCad/kicad-footprints/Resistor_SMD.pretty:R_0805_2012Metric" H 8250 1750 50  0001 C CNN
+F 3 "~" H 8250 1750 50  0001 C CNN
+	1    8250 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 1500 8250 1650
+Wire Wire Line
+	8250 1850 8250 1950
+$Comp
+L power:GND #PWR0105
+U 1 1 5FB3C861
+P 8250 2550
+F 0 "#PWR0105" H 8250 2300 50  0001 C CNN
+F 1 "GND" H 8255 2377 50  0000 C CNN
+F 2 "" H 8250 2550 50  0001 C CNN
+F 3 "" H 8250 2550 50  0001 C CNN
+	1    8250 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 2450 8250 2550
+Wire Wire Line
+	8250 1950 7650 1950
+Connection ~ 8250 1950
+Wire Wire Line
+	8250 1950 8250 2050
+Text Label 7650 1950 0    50   ~ 0
+BTN
+Wire Wire Line
+	5500 5250 6150 5250
+Wire Wire Line
+	5500 5450 6150 5450
+$Comp
+L power:+5V #PWR0106
+U 1 1 5FB3C887
+P 5100 4850
+F 0 "#PWR0106" H 5100 4700 50  0001 C CNN
+F 1 "+5V" H 5115 5023 50  0000 C CNN
+F 2 "" H 5100 4850 50  0001 C CNN
+F 3 "" H 5100 4850 50  0001 C CNN
+	1    5100 4850
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4700 5550
+Wire Wire Line
+	4700 5150 4300 5150
+Text Label 4300 5150 0    50   ~ 0
+485_Rx
+$Comp
+L power:GND #PWR0107
+U 1 1 5FB3E4CC
+P 4400 5450
+F 0 "#PWR0107" H 4400 5200 50  0001 C CNN
+F 1 "GND" H 4405 5277 50  0000 C CNN
+F 2 "" H 4400 5450 50  0001 C CNN
+F 3 "" H 4400 5450 50  0001 C CNN
+	1    4400 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 5350 4400 5450
+Wire Wire Line
+	4400 5350 4600 5350
+Text Label 5500 3400 0    50   ~ 0
+485_Rx
+$Comp
+L Regulator_Linear:L78L05_SOT89 U1
+U 1 1 5FB410FB
+P 5000 1600
+F 0 "U1" H 5000 1842 50  0000 C CNN
+F 1 "L78L05_SOT89" H 5000 1751 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/Package_TO_SOT_SMD.pretty:SOT-89-3_Handsoldering" H 5000 1800 50  0001 C CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf" H 5000 1550 50  0001 C CNN
+	1    5000 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 1600 4700 1600
+Wire Wire Line
+	5300 1600 5500 1600
+$Comp
+L power:VCC #PWR0108
+U 1 1 5FB4562A
+P 1400 3550
+F 0 "#PWR0108" H 1400 3400 50  0001 C CNN
+F 1 "VCC" H 1417 3723 50  0000 C CNN
+F 2 "" H 1400 3550 50  0001 C CNN
+F 3 "" H 1400 3550 50  0001 C CNN
+	1    1400 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0109
+U 1 1 5FB456E6
+P 4100 1550
+F 0 "#PWR0109" H 4100 1400 50  0001 C CNN
+F 1 "VCC" H 4117 1723 50  0000 C CNN
+F 2 "" H 4100 1550 50  0001 C CNN
+F 3 "" H 4100 1550 50  0001 C CNN
+	1    4100 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 1600 4100 1550
+$Comp
+L power:+5V #PWR0110
+U 1 1 5FB46098
+P 5900 1550
+F 0 "#PWR0110" H 5900 1400 50  0001 C CNN
+F 1 "+5V" H 5915 1723 50  0000 C CNN
+F 2 "" H 5900 1550 50  0001 C CNN
+F 3 "" H 5900 1550 50  0001 C CNN
+	1    5900 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 1550 5900 1600
+$Comp
+L power:+5V #PWR0111
+U 1 1 5FB46A97
+P 8250 1500
+F 0 "#PWR0111" H 8250 1350 50  0001 C CNN
+F 1 "+5V" H 8265 1673 50  0000 C CNN
+F 2 "" H 8250 1500 50  0001 C CNN
+F 3 "" H 8250 1500 50  0001 C CNN
+	1    8250 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0112
+U 1 1 5FB46B4D
+P 5050 2950
+F 0 "#PWR0112" H 5050 2800 50  0001 C CNN
+F 1 "+5V" H 5065 3123 50  0000 C CNN
+F 2 "" H 5050 2950 50  0001 C CNN
+F 3 "" H 5050 2950 50  0001 C CNN
+	1    5050 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 5FB47751
+P 1100 3650
+F 0 "J3" H 1020 3867 50  0000 C CNN
+F 1 "In1" H 1020 3776 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/TerminalBlock_Phoenix.pretty:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 1100 3650 50  0001 C CNN
+F 3 "~" H 1100 3650 50  0001 C CNN
+	1    1100 3650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 5FB48142
+P 1100 4100
+F 0 "J4" H 1020 4317 50  0000 C CNN
+F 1 "In2" H 1020 4226 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/TerminalBlock_Phoenix.pretty:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 1100 4100 50  0001 C CNN
+F 3 "~" H 1100 4100 50  0001 C CNN
+	1    1100 4100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5FB482CA
+P 1100 2100
+F 0 "J1" H 1020 2317 50  0000 C CNN
+F 1 "PWM1" H 1020 2226 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/TerminalBlock_Phoenix.pretty:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 1100 2100 50  0001 C CNN
+F 3 "~" H 1100 2100 50  0001 C CNN
+	1    1100 2100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5FB48374
+P 1100 2600
+F 0 "J2" H 1020 2817 50  0000 C CNN
+F 1 "PWM2" H 1020 2726 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/TerminalBlock_Phoenix.pretty:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 1100 2600 50  0001 C CNN
+F 3 "~" H 1100 2600 50  0001 C CNN
+	1    1100 2600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0113
+U 1 1 5FB485AE
+P 1450 2750
+F 0 "#PWR0113" H 1450 2500 50  0001 C CNN
+F 1 "GND" H 1455 2577 50  0000 C CNN
+F 2 "" H 1450 2750 50  0001 C CNN
+F 3 "" H 1450 2750 50  0001 C CNN
+	1    1450 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 2700 1450 2700
+Wire Wire Line
+	1450 2700 1450 2750
+Wire Wire Line
+	1300 2600 1650 2600
+Wire Wire Line
+	1300 2200 1650 2200
+Wire Wire Line
+	1300 2100 1650 2100
+Text Label 1450 2200 0    50   ~ 0
+PWM1
+Text Label 1450 2100 0    50   ~ 0
+SWIM_PWM2
+Text Label 1450 2600 0    50   ~ 0
+PWM3
+$Comp
+L Connector_Generic:Conn_01x03 J5
+U 1 1 5FB4B627
+P 1100 5100
+F 0 "J5" H 1020 5417 50  0000 C CNN
+F 1 "SWIM" H 1020 5326 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/Connector_PinHeader_2.54mm.pretty:PinHeader_1x03_P2.54mm_Vertical" H 1100 5100 50  0001 C CNN
+F 3 "~" H 1100 5100 50  0001 C CNN
+	1    1100 5100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0114
+U 1 1 5FB4C3C8
+P 1450 4950
+F 0 "#PWR0114" H 1450 4800 50  0001 C CNN
+F 1 "+5V" H 1465 5123 50  0000 C CNN
+F 2 "" H 1450 4950 50  0001 C CNN
+F 3 "" H 1450 4950 50  0001 C CNN
+	1    1450 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 5000 1450 5000
+Wire Wire Line
+	1450 5000 1450 4950
+$Comp
+L power:GND #PWR0115
+U 1 1 5FB4D14E
+P 1450 5250
+F 0 "#PWR0115" H 1450 5000 50  0001 C CNN
+F 1 "GND" H 1455 5077 50  0000 C CNN
+F 2 "" H 1450 5250 50  0001 C CNN
+F 3 "" H 1450 5250 50  0001 C CNN
+	1    1450 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 5200 1450 5250
+Wire Wire Line
+	1300 5200 1450 5200
+Wire Wire Line
+	1300 5100 1950 5100
+Text Label 1500 5100 0    50   ~ 0
+SWIM_PWM2
+$EndSCHEMATC

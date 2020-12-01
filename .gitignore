@@ -1,0 +1,9 @@
+FW/.vscode/settings.json
+FW/Debug/*
+FW/Release/*
+HW/STM8_001_PWM_485/.~lock.STM8_001_PWM_485_1x5-F.Cu.svg#
+HW/STM8_001_PWM_485/STM8_001_PWM_485-F.Cu.pdf
+*.bak
+*.svg
+*.dxf
+*.kicad_pcb-bak
