@@ -47,6 +47,7 @@ extern volatile uint16_t Timer_last_edge_10us;
 extern volatile uint16_t EV1527_Hightime;
 extern volatile uint16_t EV1527_LowTime;
 extern volatile bool EV1527_BitReady;
+extern uint8_t ID,GroupID;
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
@@ -381,18 +382,21 @@ INTERRUPT_HANDLER(TIM1_CAP_COM_IRQHandler, 12)
   */
  INTERRUPT_HANDLER(UART1_RX_IRQHandler, 18)
  {
+    uint8_t BRec;
     /* In order to detect unexpected events during development,
        it is recommended to set a breakpoint on the following instruction.
     */
+   BRec = UART1->SR;
+   if (BRec & UART1_SR_RXNE) BRec = ((uint8_t)UART1->DR);
+   
    if (bufflen<7)
    {
-      serialbuff[bufflen]=UART1_ReceiveData8();
+      serialbuff[bufflen]=BRec;
       bufflen++;
-      if (serialbuff[0]!='P') bufflen = 0;   
+      if ((bufflen == 1) && (serialbuff[0]!='P')) bufflen = 0;
+      if ((bufflen == 2) && !((serialbuff[1]==ID) || (serialbuff[1]==GroupID) || (serialbuff[1]==255))) bufflen = 0;
    }
-   
-   UART1_ClearFlag(UART1_FLAG_RXNE);
-   UART1_ClearITPendingBit(UART1_IT_RXNE_OR);
+   if (bufflen == 7) UART1_ITConfig(UART1_IT_RXNE_OR,DISABLE);
  }
 #endif /* (STM8S208) || (STM8S207) || (STM8S103) || (STM8S903) || (STM8AF62Ax) || (STM8AF52Ax) */
 

@@ -544,6 +544,7 @@ main()
 		{
 			ParseSerial();
 			bufflen = 0;
+			UART1_ITConfig(UART1_IT_RXNE_OR,ENABLE);
 		}
 		if (Ramp1ms >= RampTime) SetPWM();
 		if ((PIR && PIR_On) && MOTIONEN) 
