@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "stm8-debug",
+            "request": "launch",
+            "name": "launch",
+            "serverType": "st7",
+            "executable": "FW\\Debug\\8s001_pwm.elf",
+            "cpu": "stm8s103f3p",
+            "interface": "stlink3"
+        },
+        {
+            "type": "stm8-debug",
+            "request": "launch",
+            "name": "sdcc launch",
+            "serverType": "stm8-sdcc",
+            "executable": ".\\\\out\\\\SDCC\\\\executable.elf",
+            "cpu": "STM8S103F3P",
+            "openOcdConfigs": [
+                "interface/stlink.cfg",
+                "target/stm8s.cfg"
+            ]
+        }
+    ]
+}
