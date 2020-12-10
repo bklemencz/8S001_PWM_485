@@ -205,8 +205,8 @@ void RF_Task(void)
 						{
 							Ch1TGT = EV1527_Valid_Rec_Data;
 							Ch1Save = Ch1TGT;
+							DutyChanged = TRUE;
 							SaveSettings();
-							Strobe_SWIM(2);
 						}
 					}
 					else
@@ -231,8 +231,8 @@ void RF_Task(void)
 						{
 							Ch2TGT = EV1527_Valid_Rec_Data;
 							Ch2Save = Ch2TGT;
+							DutyChanged = TRUE;
 							SaveSettings();
-							Strobe_SWIM(2);
 						}
 					}
 					else
