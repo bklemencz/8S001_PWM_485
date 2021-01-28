@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name STM8_001_PWM_485-rescue)(type Legacy)(uri ${KIPRJMOD}/STM8_001_PWM_485-rescue.lib)(options "")(descr ""))
+  (lib (name 8S001_PIR_485_433)(type Legacy)(uri J:/Project/8S001_PIR_485_433/8S001_PIR_485_433.lib)(options "")(descr ""))
 )
